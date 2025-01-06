@@ -30,3 +30,25 @@
     padding: 5px;
     font-family: arial;
   }
+
+
+
+
+
+  /* Styling states manually i.e font size, transform, x, y  */
+
+  #ca-text {
+    font-size: 22px;
+    transform: rotate(70deg); /* Rotate 70 degrees */
+    transform-origin: 255.599968px 345.499969px; /* Rotate around the center of the text */
+}
+#id-text {
+    transform: translate(-7px, 40px);
+}
+#ok-text{
+  transform: translate(20px, 0px);
+}
+#mn-text {
+  transform: rotate(70deg);
+  transform-origin: 679.049988px 204.550011px; /* Rotate around the center of the text */
+}
