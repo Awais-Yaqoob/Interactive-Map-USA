@@ -21,8 +21,6 @@ $("path, circle").hover(function(e) {
     });
   }
 
-
-
    // Loop through all state paths
    document.querySelectorAll("path").forEach((path) => {
     const dataInfo = path.getAttribute("data-info"); // Get the data-info attribute
