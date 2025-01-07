@@ -55,7 +55,7 @@ $("path, circle").hover(function(e) {
     }
 
     // Set the font size dynamically
-    text.setAttribute("fill", "#000"); // Set the text color
+    text.setAttribute("fill", "#fff"); // Set the text color
     text.classList.add("state-label"); // Add a class for hover functionality
     text.setAttribute("font-size", textSize);
     text.setAttribute("x", centerX); // Center horizontally
@@ -63,8 +63,46 @@ $("path, circle").hover(function(e) {
     text.setAttribute("text-anchor", "middle"); // Center align horizontally
     text.setAttribute("alignment-baseline", "middle"); // Center align vertically
     text.textContent = stateName; // Set the state name as the text content
-
+    text.setAttribute("pointer-events", "none");
     // Append the text to the SVG
     const svgMap = document.querySelector("svg"); // Make sure the SVG container is selected
     svgMap.appendChild(text);
   });
+
+
+
+
+  // small states linked with labels
+
+// List of IDs and classes for states
+const states = ['NH', 'VT', 'MA', 'RI', 'CT', 'NJ', 'DE', 'MD', 'circle60'];
+
+states.forEach(state => {
+  // Add hover functionality for each state dynamically
+  $(`#${state}`).hover(
+    function () {
+      $(`.${state}`).css('background-color', '#C07574'); // Change background color for the ID
+      $(`#${state}`).css('fill', '#C07574'); // Change fill color for the corresponding class
+    },
+    function () {
+      $(`.${state}`).css('background-color', ''); // Reset background color for the ID
+      $(`#${state}`).css('fill', ''); // Reset fill color for the corresponding class
+    }
+  );
+
+  // Add hover functionality for classes as well (if separate handling is needed)
+  $(`.${state}`).hover(
+    function () {
+      $(`.${state}`).css('background-color', '#C07574'); // Change background color for the corresponding ID
+      $(`#${state}`).css('fill', '#C07574'); // Change fill color for the class
+    },
+    function () {
+      $(`.${state}`).css('background-color', ''); // Reset background color for the corresponding ID
+      $(`#${state}`).css('fill', ''); // Reset fill color for the class
+    }
+  );
+});
+
+
+  
+ 

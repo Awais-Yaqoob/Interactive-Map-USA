@@ -7,11 +7,10 @@
     height: 100%;
   }
   path:hover, circle:hover {
-    stroke: #002868 !important;
+    stroke: #C07574 !important;
     stroke-width:2px;
     stroke-linejoin: round;
-    fill: #002868 !important;
-    cursor: pointer;
+    fill: #C07574 !important;
   }
   #path67 {
     fill: none !important;
@@ -25,7 +24,7 @@
     left: 0px;
     z-index: 1;
     background-color: #ffffff;
-    border: 2px solid #BF0A30;
+    border: 2px solid #C07574;
     border-radius: 5px;
     padding: 5px;
     font-family: arial;
@@ -39,12 +38,31 @@
   }
   .small-state{
     font-size: 12px;
-    background-color: #D3D3D3;
-    padding: 10px;
+    background-color: #ca9e6c;
+    padding: 5px 10px;
+    color: white;
     border-radius: 10px;
   }
-
-
+  .small-state:hover {
+    background-color: #C07574;
+    color: white;
+  }
+  .legends-text-us-map{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .present-legend-us-map{
+    width: 20px;
+    height: 20px;
+    border-radius: 10%;
+    background-color: #598c8f;
+  }
+  .comming-legend-us-map{
+    width: 20px;
+    height: 20px;
+    border-radius: 10%;
+    background-color: #ca9e6c;
+  }
 
 
   /* Styling states manually i.e font size, transform, x, y  */
@@ -56,6 +74,12 @@
 }
 #id-text {
     transform: translate(-7px, 40px);
+}
+#ks-text {
+  font-size: 17px;
+}
+#ut-text {
+  font-size: 18px;
 }
 #ok-text{
   transform: translate(20px, 0px);
@@ -95,7 +119,7 @@
   transform-origin: 840.049988px 382.550011px; /* Rotate around the center of the text */
 }
 #tn-text{
-  font-size: 15px;
+  font-size: 17px;
   transform: rotate(-5deg);
   transform-origin: 828.049988px 475.550011px; /* Rotate around the center of the text */
 }
@@ -136,4 +160,27 @@
 /* Hiding internal text of small states */
 #nh-text, #vt-text, #ma-text, #ri-text, #ct-text, #nj-text, #de-text,#md-text{
   display: none;
+}
+
+#hi-text{
+  fill: black;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .us-map-small-states{
+    margin-top: 20px !important;
+    gap:3px !important;
+  }
+  .small-state{
+    font-size: 8px !important;
+    padding: 4px 5px !important;
+  }
+  .legends-text-us-map{
+    font-size: 12px;
+  }
+  .present-legend-us-map, .comming-legend-us-map{
+    width: 10px;
+    height: 10px;
+  }
 }
